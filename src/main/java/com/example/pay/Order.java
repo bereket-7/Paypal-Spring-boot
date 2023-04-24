@@ -2,12 +2,10 @@ package com.example.pay;
 
 public class Order {
 
-
 	private double price;
 	public double getPrice() {
         return price;
     }
-
 
     public void setPrice(double price) {
         this.price = price;
@@ -61,7 +59,5 @@ public class Order {
     public void setDescription(String description) {
         this.description = description;
     }
-
-
 
 }
