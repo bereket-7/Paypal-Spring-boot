@@ -44,13 +44,13 @@ public class PaypalController {
 		return "redirect:/";
 	}
 	
-	 @GetMapping(value = CANCEL_URL)
-	    public String cancelPay() {
+	@GetMapping(value = CANCEL_URL)
+	public String cancelPay() {
 	        return "cancel";
 	    }
 
-	    @GetMapping(value = SUCCESS_URL)
-	    public String successPay(@RequestParam("paymentId") String paymentId, @RequestParam("PayerID") String payerId) {
+	@GetMapping(value = SUCCESS_URL)
+	public String successPay(@RequestParam("paymentId") String paymentId, @RequestParam("PayerID") String payerId) {
 	        try {
 	            Payment payment = service.executePayment(paymentId, payerId);
 	            System.out.println(payment.toJSON());
