@@ -2,34 +2,33 @@ package com.example.pay;
 
 public class Order {
 
-    private Double totalPrice;
+
+	private double price;
+	public double getPrice() {
+        return price;
+    }
+
+
+    public void setPrice(double price) {
+        this.price = price;
+    }
 
     private String currency;
+	private String method;
+	private String intent;
+	private String description;
+    public Order(double price, String currency, String method, String intent, String description) {
+        this.price = price;
+        this.currency = currency;
+        this.method = method;
+        this.intent = intent;
+        this.description = description;
+    }
 
-    private String intent;
-
-    private String method;
-    
-    private String description;
 
     public Order() {
     }
 
-    public Order(Double totalPrice, String currency, String intent, String method, String description) {
-        this.totalPrice = totalPrice;
-        this.currency = currency;
-        this.intent = intent;
-        this.method = method;
-        this.description = description;
-    }
-
-    public Double getTotalPrice() {
-        return totalPrice;
-    }
-
-    public void setTotalPrice(Double totalPrice) {
-        this.totalPrice = totalPrice;
-    }
 
     public String getCurrency() {
         return currency;
