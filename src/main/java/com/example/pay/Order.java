@@ -3,14 +3,6 @@ package com.example.pay;
 public class Order {
 
 	private double price;
-	public double getPrice() {
-        return price;
-    }
-
-    public void setPrice(double price) {
-        this.price = price;
-    }
-
     private String currency;
 	private String method;
 	private String intent;
@@ -23,10 +15,16 @@ public class Order {
         this.description = description;
     }
 
-
     public Order() {
     }
 
+    	public double getPrice() {
+        return price;
+    }
+
+    public void setPrice(double price) {
+        this.price = price;
+    }
 
     public String getCurrency() {
         return currency;
